@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="rohit kumar" />
+    <meta
+      name="description"
+      content="PWSkills a platform to create and publish your blogs easily"
+    />
+    <title>PWSKills|BLOG</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="flex justify-between p-4 mb-6">
+      <h1 class="text-5xl font-bold">PWSkills Blog</h1>
+      <button class="createBlog-btn open-modal-btn text-xl">+</button>
+    </header>
+    <main>
+      <div class="container flex flex-wrap gap-4 p-4">
+        <dialog class="modal bg-purple-100">
+          <form
+            action="https://httpbin.org/get"
+            method="dialog"
+            class="p-5 flex flex-col gap-5"
+            autocomplete="off"
+          >
+            <button class="close-modal-btn ml-auto cursor-pointer">❌</button>
+            <p>
+              <label for="post-url" class="hidden">Enter Blog Post URL</label>
+              <input
+                type="text"
+                name="post-url"
+                id="post-url"
+                placeholder="Enter Blog Post URL:"
+                required
+                class="border-2 border-gray-300 w-full p-2"
+              />
+            </p>
+            <p>
+              <label for="post-title" class="hidden">Enter Blog Title</label>
+              <input
+                type="text"
+                name="post-title"
+                id="post-title"
+                placeholder="Enter Blog Title:"
+                required
+                class="border-2 border-gray-300 w-full p-2"
+              />
+            </p>
+            <p>
+              <label for="post-description" class="hidden"
+                >Enter Blog Description</label
+              >
+              <input
+                type="text"
+                name="post-description"
+                id="post-description"
+                placeholder="Enter Blog Description"
+                class="border-2 border-gray-300 w-full p-2"
+              />
+            </p>
+            <p>
+              <label for="post-content" class="hidden">Content</label>
+              <br />
+              <textarea
+                name="post-content"
+                id="post-content"
+                cols="30"
+                rows="10"
+                placeholder="Write."
+                required
+                class="border-2 border-gray-300 w-full p-2"
+              ></textarea>
+            </p>
+            <button
+              type="submit"
+              class="w-full bg-purple-600 text-white rounded-lg p-2"
+            >
+              Add Blog
+            </button>
+          </form>
+        </dialog>
+      </div>
+    </main>
+    <script src="../scripts/script.js"></script>
+  </body>
+</html>

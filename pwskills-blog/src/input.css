@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blog {
+  width: 300px;
+  /* height: 420px; */
+}
+
+.read-blog {
+  width: 750px;
+}
+
+.image-ctn {
+  width: 250px;
+}
+
+.blog-img {
+  width: 250px;
+  height: 250px;
+}
+
+.modal::backdrop {
+  background-color: rgb(0 0 0 /0.4);
+}
+
+article button {
+  background-color: rgb(185, 104, 7);
+  color: rgb(232, 230, 227);
+}
