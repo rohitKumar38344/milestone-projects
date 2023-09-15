@@ -8,20 +8,6 @@ formEl.addEventListener("submit", (ev) => {
   ev.preventDefault();
 });
 
-async function getMovies() {
-  const title = "fast and furious";
-  const encodedUrl = encodeURI(title);
-  const movie = await fetch(
-    `http://www.omdbapi.com/?apikey=436591ae&s=${encodedUrl}&type=movie`
-  );
-  if (movie) {
-    const data = movie.json();
-    console.log(data);
-  } else {
-    console.log("No movie found!");
-  }
-}
-
 function getMovie(query) {
   fetch(`http://www.omdbapi.com/?apikey=${MOVIE_API_KEY}&s=${query}&type=movie`)
     .then((response) => response.json())
